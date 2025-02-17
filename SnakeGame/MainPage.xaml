@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnakeGame.MainPage"
+             BackgroundColor="#424242">
+
+    <HorizontalStackLayout x:Name="ContainerLayout">
+        <VerticalStackLayout  VerticalOptions="Center" x:Name="BottomLayout">
+            <AbsoluteLayout Margin="20">
+                <Button AbsoluteLayout.LayoutBounds="40,0" x:Name="UpBotton" Text="UP" Clicked="ChangeDirection" CommandParameter="UP"/>
+                <Button AbsoluteLayout.LayoutBounds="0,50" x:Name="LeftBotton" Text="LEFT" Clicked="ChangeDirection" CommandParameter="LEFT"/>
+                <Button AbsoluteLayout.LayoutBounds="70, 50" x:Name="RightBotton" Text="RIGHT" Clicked="ChangeDirection" CommandParameter="RIGHT"/>
+                <Button AbsoluteLayout.LayoutBounds="25,100" x:Name="DownBotton" Text="DOWN" Clicked="ChangeDirection" CommandParameter="DOWN"/>
+            </AbsoluteLayout>
+        </VerticalStackLayout>
+        <Grid x:Name="InsideGrid" HorizontalOptions="Center"></Grid>
+
+        <VerticalStackLayout VerticalOptions="Center">
+            <Button Margin="10" HorizontalOptions="Center" HeightRequest="50" x:Name="StartBotton" Text="START" Clicked="RunGame"/>
+            <Button Margin="10" HorizontalOptions="Center" HeightRequest="50" x:Name="StopBotton" Text="STOP" Clicked="StopGame"/>
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+
+</ContentPage>
